@@ -2,7 +2,6 @@ package org.ow2.authzforce.sdk.impl;
 
 import com.github.tomakehurst.wiremock.junit.WireMockRule;
 import oasis.names.tc.xacml._3_0.core.schema.wd_17.PolicySet;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -44,7 +43,7 @@ public class AdminXacmlSdkImplTest {
         LOGGER.info("new domain {}", newDomainID);
         DomainProperties domainProperties = client.getDomain(newDomainID);
         assertEquals(domainProperties.getExternalId(), DOMAIN);
-        client.deleteDomain(newDomainID);
+//        client.deleteDomain(newDomainID);
     }
 
     @Test

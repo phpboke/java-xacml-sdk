@@ -45,8 +45,8 @@ public class ScenarioRecorder {
             LOGGER.info("addPolicy():{}", client.addPolicy(newDomainID, set));
             set = client.getPolicy(newDomainID, null, "myTestPolicy");
             LOGGER.info("getPolicy():{}", set);
-            client.deletePolicy(newDomainID, null, "myTestPolicy");
-            client.deleteDomain(newDomainID);
+//            client.deletePolicy(newDomainID, null, "myTestPolicy");
+//            client.deleteDomain(newDomainID);
             LOGGER.info("happy scenario done!");
         } catch (Exception e) {
             LOGGER.error("Happy scenario failure: {}", e.getMessage(), e);

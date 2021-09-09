@@ -1,13 +1,6 @@
 package org.ow2.authzforce.sdk.pdp;
 
-import java.net.URI;
-
 import org.apache.cxf.jaxrs.impl.MetadataMap;
-import org.ow2.authzforce.sdk.utils.PapService;
-import org.ow2.authzforce.sdk.utils.ServerSetup;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import org.ow2.authzforce.sdk.core.schema.Action;
 import org.ow2.authzforce.sdk.core.schema.Environment;
 import org.ow2.authzforce.sdk.core.schema.Resource;
@@ -20,15 +13,21 @@ import org.ow2.authzforce.sdk.core.schema.category.ResourceCategory;
 import org.ow2.authzforce.sdk.core.schema.category.SubjectCategory;
 import org.ow2.authzforce.sdk.exceptions.XacmlSdkException;
 import org.ow2.authzforce.sdk.impl.XacmlSdkImpl;
+import org.ow2.authzforce.sdk.utils.PapService;
+import org.ow2.authzforce.sdk.utils.ServerSetup;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.net.URI;
 
 public class CustomHeadersRequest {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(CustomHeadersRequest.class);
 
 
-	private static final String SUBJECT = "ThalesId";
-	private static final String RESOURCE = "http://www.opencloudware.org";
-	private static final String ACTION = "HEAD";
+	private static final String SUBJECT = "ThalesId111";
+	private static final String RESOURCE = "http://www.opencloudware.org333";
+	private static final String ACTION = "HEAD222";
 
 	private static final String TEST_HEADER_KEY = "SDK-SAMPLE";
 
@@ -41,10 +40,10 @@ public class CustomHeadersRequest {
 		subjectCat.addAttribute(new Subject(SUBJECT));
 		resourceCat.addAttribute(new Resource(RESOURCE));
 		actionCategory.addAttribute(new Action(ACTION));
-		environmentCategory.addAttribute(new Environment("TEST_CustomHeaders"));
+		environmentCategory.addAttribute(new Environment("TEST_CustomHeaders111"));
 
 		MetadataMap<String, String> headers = new MetadataMap<String, String>();
-		headers.add(TEST_HEADER_KEY, "TEST_CustomHeaders");
+		headers.add(TEST_HEADER_KEY, "TEST_CustomHeaders444");
 
 		URI PDP_ENDPOINT = ServerSetup.getRootURL(ServerSetup.getServer());
 		String DOMAIN_ID = PapService.setupBasicDomain(PDP_ENDPOINT,"CustomHeadersRequest1");

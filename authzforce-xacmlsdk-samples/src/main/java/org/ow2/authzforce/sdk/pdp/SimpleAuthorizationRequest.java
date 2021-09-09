@@ -1,7 +1,5 @@
 package org.ow2.authzforce.sdk.pdp;
 
-import java.net.URI;
-
 import org.ow2.authzforce.sdk.core.schema.Action;
 import org.ow2.authzforce.sdk.core.schema.Environment;
 import org.ow2.authzforce.sdk.core.schema.Resource;
@@ -18,6 +16,8 @@ import org.ow2.authzforce.sdk.utils.PapService;
 import org.ow2.authzforce.sdk.utils.ServerSetup;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.net.URI;
 
 public class SimpleAuthorizationRequest {
 
@@ -39,7 +39,7 @@ public class SimpleAuthorizationRequest {
 		actionCategory.addAttribute(new Action(ACTION));
 		environmentCategory.addAttribute(new Environment("TEST_SimpleAuthorizationRequest"));
 		URI PDP_ENDPOINT = ServerSetup.getRootURL(ServerSetup.getServer());
-		String DOMAIN_ID = PapService.setupBasicDomain(PDP_ENDPOINT,"SimpleAuthorizationRequest");
+		String DOMAIN_ID = PapService.setupBasicDomain(PDP_ENDPOINT,"SimpleAuthorizationRequest1");
 		XacmlSdkImpl myXacml = new XacmlSdkImpl(PDP_ENDPOINT, DOMAIN_ID, null);
 		Responses responses = null;
 		try {
