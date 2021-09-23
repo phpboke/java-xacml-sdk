@@ -64,6 +64,9 @@ public class AdminXacmlSdkImpl implements AdminXacmlSdk {
     public String addDomain(String description, String externalID) throws XacmlSdkException {
         try {
             LOG.info("adding domain {},{}", externalID, description);
+            adminNetworkHandler.getDomainsResource();
+            new DomainProperties(description, externalID);
+            adminNetworkHandler.getDomainsResource().addDomain(new DomainProperties(description, externalID));
             return adminNetworkHandler.getDomainsResource().addDomain(new DomainProperties(description, externalID)).getHref();
         } catch (javax.ws.rs.BadRequestException e) {
             if (getDomains(externalID).size() < 1)

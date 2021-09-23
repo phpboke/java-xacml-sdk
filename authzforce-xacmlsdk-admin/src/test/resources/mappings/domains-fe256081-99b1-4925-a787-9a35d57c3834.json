@@ -5,7 +5,7 @@
     "url" : "/domains",
     "method" : "POST",
     "bodyPatterns" : [ {
-      "equalToXml" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><domainProperties xmlns=\"http://authzforce.github.io/rest-api-model/xmlns/authz/5\" xmlns:ns2=\"http://www.w3.org/2005/Atom\" externalId=\"myTestDomain1\"><description>test domain</description></domainProperties>"
+      "equalToXml" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><domainProperties xmlns=\"http://authzforce.github.io/rest-api-model/xmlns/authz/5\" xmlns:ns2=\"http://www.w3.org/2005/Atom\" externalId=\"myTestDomain17\"><description>test domain</description></domainProperties>"
     } ]
   },
   "response" : {

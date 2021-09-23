@@ -27,6 +27,9 @@ public class ServerSetup {
 //                .path( "123" )
 //                .queryParam( "sort" , "name" )
                 .build(host, port);
+
+//        URI uri = UriBuilder.fromUri("http://localhost:8080/authzforce-ce/domains/bPr0KRhiEeytmuKSc33S1g/pap/policies/c9e0e12d-8f96-4306-9e9b-1b67522e0a73/1.0.0")
+//                .build(host, port);
         return uri;
 //        return UriBuilder.fromUri("authzforce-ce")
 //                .scheme("http")

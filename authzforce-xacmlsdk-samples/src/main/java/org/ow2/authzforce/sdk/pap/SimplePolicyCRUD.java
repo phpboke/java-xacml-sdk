@@ -18,7 +18,7 @@ import java.util.List;
 public class SimplePolicyCRUD {
     private static final Logger log = LoggerFactory.getLogger(SimplePolicyCRUD.class);
 
-    private static final String DOMAIN = "myTestDomain1";
+    private static final String DOMAIN = "myTestDomain2";
 
     public static void main(String[] args) throws Exception {
         URI baseURL = ServerSetup.getRootURL(ServerSetup.getServer());
@@ -30,7 +30,7 @@ public class SimplePolicyCRUD {
         List<Link> domains = client.getDomains();
         log.info("{} domains found: {}", domains.size(), domains.stream().map(Link::getHref).toArray());
         //创建域
-        String newDomainID = client.addDomain("test domain", DOMAIN);
+        String newDomainID = client.addDomain("test domain2", DOMAIN);
 
         log.error("(R)ead");
         domains = client.getDomains();
